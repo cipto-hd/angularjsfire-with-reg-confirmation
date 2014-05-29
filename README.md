@@ -3,7 +3,7 @@
 
 It is AngularJS seed with Firebase backend and a feature for account registration confirmation via email. This feature can be used as an alternative for account activation. It is a clone of [AngularFire Seed](https://github.com/firebase/angularFire-seed) with additional feature above and also login feature vial social login ie login with Facebook, Twitter, and Google.
 
-The account registration differs significantly from the original seed. We can register for an account just by supplying an email and then we'll get a confirmation email about our temporary random password. The password is recommended to be changed to a memorable one and at the same time it mus be strong and secure.
+The account registration differs significantly from the original seed. We can register for an account just by supplying an email and then we'll get a confirmation email about our temporary random password. The password is recommended to be changed to a memorable one and at the same time it must also be strong and secure.
 
 This project is an application skeleton for a typical [AngularFire](http://angularfire.com/) web app.
 This library allows you to quickly bootstrap real-time apps using [Firebase](http://www.firebase.com) and [AngularJS](http://www.angularjs.org).
