@@ -1,0 +1,10 @@
+{
+  "firebase": "sweltering-fire-6935",
+  "public": "app",
+  "rules": "config/security-rules.json",
+  "ignore": [
+    "firebase.json",
+    ".*",
+    "**/node_modules/**"
+  ]
+}

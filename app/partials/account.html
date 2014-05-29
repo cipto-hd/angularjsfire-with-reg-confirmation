@@ -1,0 +1,65 @@
+
+<h2>Account</h2>
+<div ng-show="angular.isString(user.email)">
+    <p>To have a account here, please logout and register for it!</p>
+</div>
+<form>
+    <fieldset>
+        <legend>Profile</legend>
+
+        <label>
+            <span>Name:</span>
+            <input type="text" name="name" ng-model="user.name"/>
+        </label>
+
+        <label>
+            <span>Email:</span>
+            <input type="text" name="name" ng-model="user.email"/>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Change Password</legend>
+
+        <label>
+            <span>Old Password:</span>
+            <input type="password" ng-keypress="reset()" ng-model="oldpass"/>
+        </label>
+
+        <label>
+            <span>New Password:</span>
+            <input type="password" ng-keypress="reset()" ng-model="newpass"/>
+        </label>
+
+        <label>
+            <span>Confirm Password:</span>
+            <input type="password" ng-keypress="reset()" ng-model="confirm"/>
+        </label>
+
+        <button ng-click="updatePassword()">update password</button>
+
+        <p class="error" ng-show="err">{{err}}</p>
+        <p class="good" ng-show="msg">{{msg}}</p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Change Email</legend>
+
+        <label>
+            <span>New Email:</span>
+            <input type="text" ng-keypress="reset()" ng-model="newemail"/>
+        </label>
+
+        <label>
+            <span>Password:</span>
+            <input type="password" ng-keypress="reset()" ng-model="pass"/>
+        </label>
+
+        <button ng-click="updateEmail()">update email</button>
+
+        <p class="error" ng-show="emailerr">{{emailerr}}</p>
+        <p class="good" ng-show="emailmsg">{{emailmsg}}</p>
+    </fieldset>
+</form>
+
+<button ng-click="logout()">Log Out</button>

@@ -1,0 +1,38 @@
+
+<div ng-hide="regresponse.show">
+    <h2 ng-hide="createMode">Login Page</h2>
+    <h2 ng-show="createMode">Registration Page</h2>
+
+    <form novalidate ng-submit="submit()">
+        <label>
+            <span>Email</span>
+            <input type="text" ng-model="email" />
+        </label>
+        <label ng-hide="createMode">
+            <span>Password</span>
+            <input type="password" ng-model="pass" />
+        </label><!-- 
+        <label ng-cloak ng-show="createMode">
+            <span>confirm pass</span>
+            <input type="password" ng-model="confirm" />
+        </label> -->
+        <button type="submit" ng-hide="createMode" class="btn btn-primary">Log In</button>
+        <a ng-click="createMode = true" ng-hide="createMode" class="btn btn-primary">Register</a>
+        <button type="submit" ng-cloak ng-show="createMode" class="btn btn-primary">Create Account</button>
+        <a ng-cloak ng-show="createMode" ng-click="createMode = false" class="btn btn-primary">Cancel</a>
+
+        <a ng-hide="createMode" class="btn btn-success" ng-click="login('facebook',socialCb())">Login with Facebook</a>
+        <a ng-hide="createMode" class="btn btn-success" ng-click="login('twitter',socialCb())">Login with Twitter</a>
+        <a ng-hide="createMode" class="btn btn-success" ng-click="login('google',socialCb())">Login with Google</a>
+        <p ng-show="err" class="error">{{err}}</p>
+    </form>
+</div>
+<div ng-show="regresponse.show">
+    <h2>Reg Response</h2>
+    <div class="row">
+    <div class="col-sm-6">
+    <p class="bg-warning">{{regresponse.message}}</p>
+    <p class="bg-warning">{{regresponse.instruction}}</p>        
+    </div>
+    </div>
+</div>
